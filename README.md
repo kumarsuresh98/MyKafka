@@ -17,3 +17,24 @@ kafka-console-producer.bat --broker-list localhost:9092 --topic text.test
 
 #start consumer
 kafka-console-consumer.bat --topic text.test --from-beginning --zookeeper localhost:2181
+
+
+
+// controller for String
+
+@Service
+public class Producer {
+
+    private static final Logger logger = LoggerFactory.getLogger(Producer.class);
+    private static final String TOPIC = "users";
+
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
+
+    public void sendMessage(String message) {
+        logger.info(String.format("#### -> Producing message -> %s", message));
+        this.kafkaTemplate.send(TOPIC, message);
+    }
+}
+
+#The above code uses the string format
