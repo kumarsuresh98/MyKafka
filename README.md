@@ -49,4 +49,8 @@ https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-1-error-han
 https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream
 
 
+#KAFKA Streams
+
+https://www.baeldung.com/java-kafka-streams
+
 
