@@ -44,3 +44,9 @@ public class Producer {
 
 https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-1-error-handling-message-conversion-transaction-support
 
+#Spring cloud stream for kafka
+
+https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream
+
+
+
