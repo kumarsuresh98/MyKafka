@@ -23,6 +23,7 @@ kafka-console-consumer.bat --topic text.test --from-beginning --zookeeper localh
 // controller for String
 
 @Service
+//class
 public class Producer {
 
     private static final Logger logger = LoggerFactory.getLogger(Producer.class);
@@ -34,6 +35,21 @@ public class Producer {
     public void sendMessage(String message) {
         logger.info(String.format("#### -> Producing message -> %s", message));
         this.kafkaTemplate.send(TOPIC, message);
+    }
+}
+
+
+
+
+@Service
+//consumer class
+public class Consumer {
+
+    private final Logger logger = LoggerFactory.getLogger(Producer.class);
+
+    @KafkaListener(topics = "users", groupId = "group_id")
+    public void consume(String message) throws IOException {
+        logger.info(String.format("#### -> Consumed message -> %s", message));
     }
 }
 
